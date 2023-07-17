@@ -34,28 +34,28 @@ export default function Dashboard() {
   const iconBoxInside = useColorModeValue("white", "white");
 
   return (
-    <Flex flexDirection='column' pt={{ base: "120px", md: "75px" }}>
-      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing='24px'>
+    <Flex flexDirection="column" pt={{ base: "120px", md: "75px" }}>
+      <SimpleGrid columns={{ sm: 1, md: 2, xl: 4 }} spacing="24px">
         <MiniStatistics
-          title={"إجمالي المبيعات"}
+          title={"総売上高"}
           amount={"$53,000"}
           percentage={55}
           icon={<WalletIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
         />
         <MiniStatistics
-          title={"عملاء جدد"}
+          title={"新規顧客"}
           amount={"2,300"}
           percentage={5}
           icon={<GlobeIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
         />
         <MiniStatistics
-          title={"مستخدمو اليوم"}
+          title={"今日のユーザー"}
           amount={"+3,020"}
           percentage={-14}
           icon={<DocumentIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
         />
         <MiniStatistics
-          title={"أموال اليوم"}
+          title={"今日の利益"}
           amount={"$173,000"}
           percentage={8}
           icon={<CartIcon h={"24px"} w={"24px"} color={iconBoxInside} />}
@@ -64,42 +64,44 @@ export default function Dashboard() {
       <Grid
         templateColumns={{ md: "1fr", lg: "1.8fr 1.2fr" }}
         templateRows={{ md: "1fr auto", lg: "1fr" }}
-        my='26px'
-        gap='24px'>
+        my="26px"
+        gap="24px"
+      >
         <BuiltByDevelopers
-          title={"بناها المطورون"}
-          name={"لوحة معلومات Purity UI"}
+          title={"デベロッパーによる構築"}
+          name={"Purity UIダッシュボード"}
           description={
-            "من الألوان والبطاقات والطباعة إلى العناصر المعقدة ، ستجد الوثائق الكاملة."
+            "カラー、カード、タイポグラフィーから複雑な要素まで、完全なドキュメンテーションが用意されています。"
           }
           image={
             <Image
               src={logoChakra}
-              alt='chakra image'
+              alt="chakra image"
               minWidth={{ md: "300px", lg: "auto" }}
             />
           }
         />
         <WorkWithTheRockets
           backgroundImage={peopleImage}
-          title={"العمل مع الصواريخ"}
+          title={"ロケットと一緒に働く"}
           description={
-            "تكوين الثروة هو لعبة ثورية حديثة ذات محصلة إيجابية. الأمر كله يتعلق بمن يغتنم الفرصة أولاً."
+            "富の形成は、ポジティブな総収入のモダンな革命的なゲームです。すべては誰が最初にチャンスをつかむかについてです。"
           }
         />
       </Grid>
       <Grid
         templateColumns={{ sm: "1fr", lg: "1.3fr 1.7fr" }}
         templateRows={{ sm: "repeat(2, 1fr)", lg: "1fr" }}
-        gap='24px'
-        mb={{ lg: "26px" }}>
+        gap="24px"
+        mb={{ lg: "26px" }}
+      >
         <ActiveUsers
-          title={"المستخدمين النشطين"}
+          title={"アクティブユーザー"}
           percentage={23}
           chart={<BarChart />}
         />
         <SalesOverview
-          title={"نظرة عامة على المبيعات"}
+          title={"売上概要"}
           percentage={5}
           chart={<LineChart />}
         />
@@ -107,15 +109,16 @@ export default function Dashboard() {
       <Grid
         templateColumns={{ sm: "1fr", md: "1fr 1fr", lg: "2fr 1fr" }}
         templateRows={{ sm: "1fr auto", md: "1fr", lg: "1fr" }}
-        gap='24px'>
+        gap="24px"
+      >
         <Projects
-          title={"المشاريع"}
+          title={"プロジェクト"}
           amount={30}
           captions={["Companies", "Members", "Budget", "Completion"]}
           data={rtlDashboardTableData}
         />
         <OrdersOverview
-          title={"نظرة عامة على الطلبات"}
+          title={"注文の概要"}
           amount={30}
           data={rtlTimelineData}
         />

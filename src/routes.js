@@ -6,7 +6,7 @@ import RTLPage from "views/Dashboard/RTL";
 import Profile from "views/Dashboard/Profile";
 import SignIn from "views/Auth/SignIn.js";
 import SignUp from "views/Auth/SignUp.js";
-
+import { A1 } from "Pages/PagesA/A1";
 import {
   HomeIcon,
   StatsIcon,
@@ -21,7 +21,7 @@ var dashRoutes = [
   {
     path: "/dashboard",
     name: "Dashboard",
-    rtlName: "لوحة القيادة",
+    rtlName: "Dashboard",
     icon: <HomeIcon color="inherit" />,
     component: Dashboard,
     layout: "/admin",
@@ -29,7 +29,7 @@ var dashRoutes = [
   {
     path: "/tables",
     name: "Tables",
-    rtlName: "لوحة القيادة",
+    rtlName: "Dashboard",
     icon: <StatsIcon color="inherit" />,
     component: Tables,
     layout: "/admin",
@@ -37,7 +37,7 @@ var dashRoutes = [
   {
     path: "/billing",
     name: "Billing",
-    rtlName: "لوحة القيادة",
+    rtlName: "Dashboard",
     icon: <CreditIcon color="inherit" />,
     component: Billing,
     layout: "/admin",
@@ -45,21 +45,30 @@ var dashRoutes = [
   {
     path: "/rtl-support-page",
     name: "RTL",
-    rtlName: "آرتيإل",
+    rtlName: "RTL",
     icon: <SupportIcon color="inherit" />,
     component: RTLPage,
     layout: "/rtl",
   },
   {
+    path: "/Pages/PagesA/A1",
+    name: "Pages/PagesA/A1",
+    rtlName: "Pages/PagesA/A1",
+    icon: <SupportIcon color="inherit" />,
+    component: A1,
+    layout: "/admin",
+  },
+
+  {
     name: "ACCOUNT PAGES",
     category: "account",
-    rtlName: "صفحات",
+    rtlName: "Pages",
     state: "pageCollapse",
     views: [
       {
         path: "/profile",
         name: "Profile",
-        rtlName: "لوحة القيادة",
+        rtlName: "Dashboard",
         icon: <PersonIcon color="inherit" />,
         secondaryNavbar: true,
         component: Profile,
@@ -68,7 +77,7 @@ var dashRoutes = [
       {
         path: "/signin",
         name: "Sign In",
-        rtlName: "لوحة القيادة",
+        rtlName: "Dashboard",
         icon: <DocumentIcon color="inherit" />,
         component: SignIn,
         layout: "/auth",
@@ -76,7 +85,7 @@ var dashRoutes = [
       {
         path: "/signup",
         name: "Sign Up",
-        rtlName: "لوحة القيادة",
+        rtlName: "Dashboard",
         icon: <RocketIcon color="inherit" />,
         secondaryNavbar: true,
         component: SignUp,
@@ -85,4 +94,5 @@ var dashRoutes = [
     ],
   },
 ];
+
 export default dashRoutes;

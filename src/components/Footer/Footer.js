@@ -29,9 +29,7 @@ export default function Footer(props) {
       >
         &copy; {1900 + new Date().getYear()},{" "}
         <Text as="span">
-          {document.documentElement.dir === "rtl"
-            ? " مصنوع من ❤️ بواسطة"
-            : "Made with ❤️ by "}
+          {document.documentElement.dir === "rtl" ? " مصنوع من ❤️ بواسطة" : ""}
         </Text>
         <Link
           // color={linkTeal}
@@ -39,9 +37,7 @@ export default function Footer(props) {
           href="https://www.creative-tim.com"
           target="_blank"
         >
-          {document.documentElement.dir === "rtl"
-            ? " توقيت الإبداعية"
-            : "Creative Tim "}
+          {document.documentElement.dir === "rtl" ? " توقيت الإبداعية" : " "}
         </Link>
         &
         <Link
@@ -50,11 +46,9 @@ export default function Footer(props) {
           href="https://www.simmmple.com"
           target="_blank"
         >
-          {document.documentElement.dir === "rtl" ? "سيممبل " : " Simmmple"}
+          {document.documentElement.dir === "rtl" ? "سيممبل " : ""}
         </Link>
-        {document.documentElement.dir === "rtl"
-          ? "للحصول على ويب أفضل"
-          : " for a better web"}
+        {document.documentElement.dir === "rtl" ? "للحصول على ويب أفضل" : " "}
       </Text>
       <List display="flex">
         <ListItem
